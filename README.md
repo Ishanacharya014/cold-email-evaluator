@@ -72,3 +72,15 @@ cold-email-evaluator/
 │   └── strong-email.md
 └── assets/
     └── evaluator.jsx
+
+
+# Cold Email Evaluator
+
+A public AI-assisted website that evaluates cold emails using a 5-point rubric:
+- Relevant
+- Specific
+- Clear
+- Human
+- Low friction
+
+The project uses AI-assisted web development and is open-source friendly.
