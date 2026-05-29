@@ -58,6 +58,8 @@ Every evaluation must use the 5 criteria:
 
 Each criterion is scored from 1 to 5.
 
+The evaluation rubric must remain consistent with SKILL.md and references/cold-email-principles.md. New knowledge may extend the skill but must not override the core rubric without an explicit skill version update.
+
 ## 7. Expected Behavior
 The evaluator must:
 - analyze the current subject and body only
