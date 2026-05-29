@@ -109,6 +109,8 @@ Version 1 does not need:
 - analytics dashboards
 - database-backed user accounts unless required for skill versioning
 
+The frontend is not the primary product in Version 1 and should only serve as an admin console for testing, editing, and publishing the skill.
+
 ## 12. Admin Console Scope
 The admin console may be minimal and should only support:
 - viewing the active skill version
