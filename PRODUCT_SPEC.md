@@ -58,6 +58,8 @@ Every evaluation must use the 5 criteria:
 
 Each criterion is scored from 1 to 5.
 
+The evaluation rubric must remain consistent with SKILL.md and references/cold-email-principles.md. New knowledge may extend the skill but must not override the core rubric without an explicit skill version update.
+
 ## 7. Expected Behavior
 The evaluator must:
 - analyze the current subject and body only
@@ -106,6 +108,8 @@ Version 1 does not need:
 - social features
 - analytics dashboards
 - database-backed user accounts unless required for skill versioning
+
+The frontend is not the primary product in Version 1 and should only serve as an admin console for testing, editing, and publishing the skill.
 
 ## 12. Admin Console Scope
 The admin console may be minimal and should only support:
