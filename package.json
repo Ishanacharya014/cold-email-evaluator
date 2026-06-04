@@ -1,0 +1,31 @@
+{
+  "name": "cold-email-evaluator",
+  "version": "1.0.0",
+  "description": "Cold Email Skill MCP Server",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "cold-email",
+    "email",
+    "evaluation",
+    "ai"
+  ],
+  "author": "Ishan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
