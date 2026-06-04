@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/evaluation.schema.json",
+  "title": "Cold Email Evaluation Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "skill_version",
+    "overall_score",
+    "verdict",
+    "scores",
+    "what_works",
+    "what_to_fix",
+    "rewritten_subject",
+    "quick_tip",
+    "suggestions",
+    "rewrite"
+  ],
+  "properties": {
+    "skill_version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Skill version used to produce this evaluation."
+    },
+    "overall_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Average of the five rubric scores, rounded to the nearest integer."
+    },
+    "verdict": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "Short honest verdict on the email."
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relevant",
+        "specific",
+        "clear",
+        "human",
+        "low_friction"
+      ],
+      "properties": {
+        "relevant": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "specific": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "clear": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "human": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "low_friction": { "type": "integer", "minimum": 1, "maximum": 5 }
+      }
+    },
+    "what_works": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Concrete strengths in the current email."
+    },
+    "what_to_fix": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Actionable fixes for the current email."
+    },
+    "rewritten_subject": {
+      "type": ["string", "null"],
+      "description": "Improved subject line if needed, otherwise null."
+    },
+    "quick_tip": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One short improvement tip."
+    },
+    "suggestions": {
+      "type": "array",
+      "description": "Structured suggestion list with status tracking.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "category",
+          "status",
+          "text",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Stable suggestion identifier."
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "relevant",
+              "specific",
+              "clear",
+              "human",
+              "low_friction"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "fixed",
+              "not_applicable"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "rewrite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject",
+        "body",
+        "changes"
+      ],
+      "properties": {
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

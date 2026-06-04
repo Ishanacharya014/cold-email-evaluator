@@ -1,0 +1,21 @@
+{
+  "skill_name": "cold-email-evaluator",
+  "active_version": "v1.0",
+  "source_of_truth": [
+    "SKILL.md",
+    "references/cold-email-principles.md",
+    "examples/weak-email.md",
+    "examples/strong-email.md"
+  ],
+  "active_files": {
+    "rubric": "skill/active/rubric.md",
+    "examples": "skill/active/examples.md",
+    "anti_examples": "skill/active/anti_examples.md",
+    "rewrite_rules": "skill/active/rewrite_rules.md",
+    "subject_rules": "skill/active/subject_rules.md"
+  },
+  "versions": {
+    "v1.0": "skill/versions/v1.0/"
+  },
+  "output_schema": "schemas/evaluation.schema.json"
+}

@@ -1,0 +1,48 @@
+{
+  "skill_version": "v1.0",
+  "overall_score": 4,
+  "verdict": "Clear and human, but the opening and ask need more specificity.",
+  "scores": {
+    "relevant": 3,
+    "specific": 4,
+    "clear": 4,
+    "human": 4,
+    "low_friction": 4
+  },
+  "what_works": [
+    "The email is short and easy to skim.",
+    "The tone sounds natural and not overly polished.",
+    "The ask is simple and low-pressure."
+  ],
+  "what_to_fix": [
+    "Add a more specific reason for reaching out.",
+    "Tighten the opening so it feels more tailored to the recipient."
+  ],
+  "rewritten_subject": "Quick question about onboarding",
+  "quick_tip": "Give the reader one concrete reason why you picked them.",
+  "suggestions": [
+    {
+      "id": "missing-specific-context",
+      "category": "relevant",
+      "status": "open",
+      "text": "Add a specific reason for reaching out.",
+      "evidence": "The body does not explain why this recipient was chosen."
+    },
+    {
+      "id": "short-ask",
+      "category": "low_friction",
+      "status": "fixed",
+      "text": "Keep the ask short and easy to answer.",
+      "evidence": "The current draft already uses a bounded, low-pressure ask."
+    }
+  ],
+  "rewrite": {
+    "subject": "Quick question about onboarding",
+    "body": "Hi Sarah,\n\nI noticed your signup flow gets users into the product fast, but there is not much guidance after that first step.\n\nI mocked up two small onboarding changes after testing the flow for 15 minutes.\n\nIf useful, I can send the screenshots over. Worth a quick look?\n\nBest,\nIshan",
+    "changes": [
+      "Added a specific opening reason",
+      "Kept the ask short and low-friction",
+      "Preserved the original intent"
+    ]
+  }
+}
