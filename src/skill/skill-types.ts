@@ -12,3 +12,12 @@ export interface SkillManifest {
   versions: Record<string, string>;
   output_schema: string;
 }
+
+export interface LoadedSkill {
+  version: string;
+  rubric: string;
+  examples: string;
+  antiExamples: string;
+  rewriteRules: string;
+  subjectRules: string;
+}
