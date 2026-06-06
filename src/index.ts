@@ -1,12 +1,16 @@
-import { loadSkill } from "./skill/skill-loader.js";
+import { evaluateEmail } from "./engine/evaluator.js";
 
-const skill = loadSkill();
+const result = evaluateEmail({
+  subject: "Quick question",
+  body: `
+Hi Sarah,
 
-console.log("Skill Loaded");
-console.log("Version:", skill.version);
+I noticed your onboarding flow.
 
-console.log("\nRubric Length:");
-console.log(skill.rubric.length);
+I think I can reduce drop-off by 20%.
 
-console.log("\nExamples Length:");
-console.log(skill.examples.length);
+Worth a quick chat?
+`
+});
+
+console.log(JSON.stringify(result, null, 2));
