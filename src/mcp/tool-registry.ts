@@ -2,6 +2,7 @@ import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
 import { evaluateEmail } from "../engine/evaluator.js";
+import { importKnowledge } from "../skill/import-manager.js";
 import {
   createSkillDraft,
   validateSkillVersion,
@@ -123,6 +124,40 @@ export function registerToolRegistry(server: McpServer): void {
           {
             type: "text",
             text: jsonText(result),
+          },
+        ],
+      };
+    }
+  );
+
+
+
+    server.registerTool(
+    "import_knowledge",
+    {
+      description: "Import external text into a draft skill version.",
+      inputSchema: {
+        source_text: z.string().min(1),
+        source_type: z.string().min(1),
+        tags: z.array(z.string()).default([]),
+        base_version_id: z.string().min(1),
+        draft_version_id: z.string().min(1),
+      },
+    },
+    async ({ source_text, source_type, tags, base_version_id, draft_version_id }) => {
+      const result = importKnowledge({
+        source_text,
+        source_type,
+        tags,
+        base_version_id,
+        draft_version_id,
+      });
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(result, null, 2),
           },
         ],
       };

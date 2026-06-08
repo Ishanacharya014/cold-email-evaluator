@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "status": "published",
+  "created_by": "Ishan",
+  "created_from": [
+    "SKILL.md",
+    "references/cold-email-principles.md",
+    "examples/strong-email.md",
+    "examples/weak-email.md"
+  ],
+  "notes": "Initial structured skill version."
+}
