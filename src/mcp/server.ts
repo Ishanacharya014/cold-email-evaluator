@@ -5,6 +5,7 @@ import { registerResourceRegistry } from "./resource-registry.js";
 import { registerPromptRegistry } from "./prompt-registry.js";
 import { registerImportReviewRegistry } from "./import-review-registry.js";
 import { registerImportPublishRegistry } from "./import-publish-registry.js";
+import { registerAuthRegistry } from "./auth-registry.js";
 
 const server = new McpServer({
   name: "cold-email-evaluator",
@@ -16,6 +17,7 @@ registerResourceRegistry(server);
 registerPromptRegistry(server);
 registerImportReviewRegistry(server);
 registerImportPublishRegistry(server);
+registerAuthRegistry(server);
 
 async function main() {
   const transport = new StdioServerTransport();

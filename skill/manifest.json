@@ -1,6 +1,6 @@
 {
   "skill_name": "cold-email-evaluator",
-  "active_version": "v1.0",
+  "active_version": "v1.1-promoted",
   "source_of_truth": [
     "SKILL.md",
     "references/cold-email-principles.md",

@@ -63,8 +63,8 @@ describe("import workflow", () => {
       const validation = validateSkillVersion(targetVersionId);
       expect(validation.valid).toBe(true);
 
-      const rubric = readVersionFile(targetVersionId, "rubric.md");
-      expect(rubric).toContain("Imported Knowledge");
+      const examples = readVersionFile(targetVersionId, "examples.md");
+expect(examples).toContain("Imported Knowledge");
     } finally {
       cleanupVersion(draftVersionId);
       cleanupVersion(targetVersionId);
