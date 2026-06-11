@@ -8,5 +8,15 @@
     "created_at": "2026-06-09T11:07:01.903Z",
     "updated_at": "2026-06-09T11:07:24.936Z",
     "last_used_at": null
+  },
+  {
+    "id": "d8ce7404-5f2d-4d86-be2f-244fa02cb3c7",
+    "name": "Initial Admin",
+    "api_key": "cex_b4be74f3ec38acd21658019c950d4ef9641609480c408894",
+    "role": "admin",
+    "status": "active",
+    "created_at": "2026-06-11T09:23:20.855Z",
+    "updated_at": "2026-06-11T09:46:07.064Z",
+    "last_used_at": "2026-06-11T09:46:07.064Z"
   }
 ]
