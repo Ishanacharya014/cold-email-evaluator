@@ -7,6 +7,7 @@ import { registerImportReviewRegistry } from "./import-review-registry.js";
 import { registerImportPublishRegistry } from "./import-publish-registry.js";
 import { registerAuthRegistry } from "./auth-registry.js";
 
+
 const server = new McpServer({
   name: "cold-email-evaluator",
   version: "1.0.0",

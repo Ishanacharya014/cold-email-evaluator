@@ -16,7 +16,17 @@
     "role": "admin",
     "status": "active",
     "created_at": "2026-06-11T09:23:20.855Z",
-    "updated_at": "2026-06-11T09:46:07.064Z",
-    "last_used_at": "2026-06-11T09:46:07.064Z"
+    "updated_at": "2026-06-22T14:36:50.696Z",
+    "last_used_at": "2026-06-22T14:36:50.696Z"
+  },
+  {
+    "id": "d2307668-a365-46d3-80f3-4a73114de9d4",
+    "name": "Test Client",
+    "api_key": "cex_3a8ce2c5875b3f8d7567280efc849098dade2101200537d9",
+    "role": "read_only",
+    "status": "revoked",
+    "created_at": "2026-06-22T14:25:45.737Z",
+    "updated_at": "2026-06-22T14:36:50.698Z",
+    "last_used_at": null
   }
 ]

@@ -8,9 +8,10 @@ import { registerPromptRegistry } from "./prompt-registry.js";
 import { registerImportReviewRegistry } from "./import-review-registry.js";
 import { registerImportPublishRegistry } from "./import-publish-registry.js";
 import { registerAuthRegistry } from "./auth-registry.js";
+import { config } from "../config.js";
 
-const HOST = process.env.HOST ?? "127.0.0.1";
-const PORT = Number(process.env.PORT ?? 3001);
+const HOST = config.host;
+const PORT = config.mcpPort;
 const MCP_PATH = "/mcp";
 
 function setCorsHeaders(res: ServerResponse): void {
